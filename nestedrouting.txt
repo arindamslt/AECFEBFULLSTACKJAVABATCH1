@@ -1,0 +1,47 @@
+IN NAV.js
+====================================
+<Link to="/order">ORDER</Link>
+==================================
+IN Order.js
+============================================
+import { Link,Outlet } from "react-router-dom";
+
+function Order()
+{
+    return(
+        <div>
+            <Nav/>
+        <div className="orderContainer" >
+                <div className="orderleftContainer" >
+              <Link to="view">ORDER REPORT</Link>
+              <Link to="add">ADD ORDER DATA</Link>
+              <Link to="delete">DELETE ORDER</Link>
+              <Link to="update">UPDATE ORDER DATA</Link>
+              <Link to="search">SEARCH ORDER</Link>
+            </div>
+            <div className="rightContainer">
+           <Outlet/>
+            </div>
+        </div>
+        </div>
+    );
+}
+
+
+IN APP.js
+=================================================================
+<Routes>
+     
+     
+     <Route path="/" element={<Home/>}/>
+     <Route path="/nav" element={<Nav/>}></Route>
+     <Route path="/register" element={<Registration/>}></Route>
+     <Route path="/order" element={<Order/>}>
+        <Route path="view" element={<OrderReport/>}/>
+        <Route path="add" element={<OrderAdd/>}/>
+        <Route path="delete" element={<OrderDel/>}/>
+        <Route path="update" element={<OrderUpd/>}/>
+        <Route path="search" element={<SearchOrderId/>}/>
+        </Route>
+     
+    </Routes>

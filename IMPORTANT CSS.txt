@@ -1,0 +1,19 @@
+IMPORTANT CSS
+==============================================
+box-shadow:0 0 10px black;
+margin:15px auto;
+text-align:center;
+padding:5x,15x
+border:3px solid black;
+width:100vw;
+height:100vm;
+display:flex;
+flex-direction:column;
+justify-content:space-evenly;
+align-items:center;
+border-radious:5px;
+font-weight:bold;
+color:white;
+font-size:30px;
+text-decoration:none;
+

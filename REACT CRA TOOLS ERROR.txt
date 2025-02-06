@@ -1,0 +1,6 @@
+REACT CRA TOOLS ERROR
+=============================================================
+npm uninstall -g create-react-app
+npx create-react-app appdemo
+if still issue
+npm install -g update -node npm update npm -g

@@ -1,0 +1,5 @@
+2024-02-19 10:05:01,326 -com.arindam.Test [processData]- (DEBUG) -FROM DEBUG METHOD -
+2024-02-19 10:05:01,335 -com.arindam.Test [processData]- (INFO) -FROM INFO METHOD -
+2024-02-19 10:05:01,336 -com.arindam.Test [processData]- (ERROR) -FROM ERROR METHOD -
+2024-02-19 10:05:01,337 -com.arindam.Test [processData]- (WARN) -FROM WARNING METHOD -
+2024-02-19 10:05:01,337 -com.arindam.Test [processData]- (FATAL) -FROM FATAL METHOD -

@@ -1,0 +1,10 @@
+MAVEN DOWNLOAD
+============================================================================
+https://maven.apache.org/download.cgi
+==============================================================================
+MAVEN COMMANDS
+==========================================================================
+mvn -v
+C:\Users\arins>mvn archetype:generate -DgroupId=com.arindam -DartifactId=my-maven-app -DarchetypeArtifactId=maven-archetype-quickstart  -DinteractiveMode=false
+
+C:\Users\arins\my-maven-app>mvn clean package

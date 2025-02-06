@@ -1,0 +1,42 @@
+
+JAVA17 INSTALLATION
+==============================================
+https://www.oracle.com/in/java/technologies/downloads/#jdk17-windows
+THEN GO TO JDK17
+THEN CLICK ON X64 Installer IT WILL DOWNLOAD EXEC FILE
+CLICK ON EXE FILE AND INSTALL IT
+===================================================
+STS IDE INSTALLATION
+===========================================================
+https://spring.io/tools
+THEN GO TO Spring Tools 4 for Eclipse
+THEN CLICK WINDOWS X86_64
+IF ANY PROBLEM SEE THE YOUTUBE LINK
+=======================================================
+https://www.youtube.com/watch?v=P1N-RGJ2820
+
+=============================================
+MYSQL INSTALLATION
+===============================================
+https://www.youtube.com/watch?v=0AF0w_OJyDs
+===============================================
+
+LOMBOK INSTALLATION
+===================================================
+Explain in the class
+==================================================
+
+POSTMAN INSTALLATION
+====================================================
+https://www.youtube.com/watch?v=Hmn5XeZv-GE
+https://www.postman.com/downloads/
+=====================================================
+
+====================================================
+Explain in Class
+===================================================
+VISUAL CODE IDE INSTALLATION
+==============================================
+Explain in Class
+
+=================================================

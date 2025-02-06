@@ -1,0 +1,35 @@
+ROUTING 
+========================================================
+STEP1
+==========================================================
+npm install react-router-dom
+STEP2
+======================================================
+OPEN index.js file under src folder
+import { BrowserRouter as Rt } from "react-router-dom";
+WITHN render() method
+======================================
+<React.StrictMode>
+   <Rt>
+    <App />
+    </Rt>
+  </React.StrictMode>
+========================================================
+IN App.js
+========================================================
+import { Routes,Route } from 'react-router-dom';
+=======================================================
+ <Routes>
+      <Route path="/contact" element={<Contact/>}/>
+      <Route path="/user" element={<User/>}/>
+      <Route path="/userinfo" element={<UserInfo/>}/>
+      <Route path="/condrend" element={<Main/>}/>
+      <Route path="/product" element={<Product/>}>
+        <Route path="jw" element={<Jwellery/>}/>
+        <Route path="gr" element={<Garments/>}/>
+        <Route path="elec" element={<Electronics/>}/>
+        <Route path="rt" element={<Retails/>}/>
+      </Route>
+     </Routes>
+==========================================================
+

@@ -1,0 +1,6 @@
+my:
+  db:
+    driver: Oracle
+    url: JDBC-ORCL
+    uname: scott
+    pass: tiger

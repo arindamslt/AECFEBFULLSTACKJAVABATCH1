@@ -1,0 +1,16 @@
+
+FILTER  DATA
+========================================================
+const filterData=(event)=>{
+     if(event.target.value==="male")
+     {
+        setUser(data.filter((user)=>user.gender==="male"))
+     }
+     else if(event.target.value==="female")
+     {
+        setUser(data.filter((user)=>user.gender==="female"))
+     }
+     else{
+        setUser(data);
+     }
+    }

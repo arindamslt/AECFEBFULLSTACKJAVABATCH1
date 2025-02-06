@@ -1,0 +1,31 @@
+TABLE POPULATION
+===============================================
+<table cellPadding={10} style={{marginTop:"50px",marginLeft:"25px"}}>
+                <thead style={{backgroundColor:'black',color:'white'}}>
+                  <tr>
+                    <th>ID</th>
+                    <th>IMAGE</th>
+                    <th>NAME</th>
+                    <th>GENDER</th>
+                    <th>EMAIL</th>
+                    <th>CITY</th>
+                  </tr>
+                </thead>
+               <tbody>
+               {
+                   user.map((element,index)=>{
+                   return(
+                     <tr>
+                        <td>{index+1}</td>
+                        <td><img src={element.picture.medium} height={80} width={80}/></td>
+                        <td>{element.name.first}</td>
+                        <td>{element.gender}</td>
+                        <td>{element.email}</td>
+                        <td>{element.location.city}</td>
+                     </tr>
+                   );
+                   })
+               }
+
+               </tbody>
+            </table>

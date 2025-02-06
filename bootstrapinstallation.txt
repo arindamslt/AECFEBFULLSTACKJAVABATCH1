@@ -1,0 +1,6 @@
+INSTALLATION OF BOOTSTRAP
+===================================================== 
+npm install bootstrap
+IN APP.js ADD
+======================================
+import "bootstrap/dist/css/bootstrap.css";

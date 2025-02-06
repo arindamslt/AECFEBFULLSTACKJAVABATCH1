@@ -1,0 +1,4 @@
+npm install axios
+import axios from "axios";
+url= "https://randomuser.me/api/?results=20"
+

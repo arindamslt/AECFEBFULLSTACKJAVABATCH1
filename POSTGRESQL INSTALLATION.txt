@@ -1,0 +1,21 @@
+POSTGRESQL INSTALLATION
+================================================================================
+https://www.youtube.com/results?search_query=postgresql+installation+windows+11
+=================================================================================
+DRIVER
+================================================================================
+org.postgresql.Driver
+
+URL
+=========
+ "jdbc:postgresql://localhost:5432/test", "postgres", "password"
+PostgreSQL Dependency
+===================================
+<dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <version>42.7.2</version>
+</dependency>
+HIBERNATE DIALECT
+================================================
+org.hibernate.dialect.PostgreSQLDialect

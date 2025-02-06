@@ -1,0 +1,18 @@
+Context API
+===================================================
+import { createContext } from "react";
+var mycontexts=createContext();
+export default mycontexts;
+==================================================
+IN PARENT COMPONENT
+===============================================
+import mycontexts from './components/contexts';
+<mycontexts.Provider value={state}>
+      <F/>
+ </mycontexts.Provider>
+FROM WHICH CHILD GETTING THE PARENT DATA
+=============================================
+import { useContext } from 'react'
+import mycontexts from './contexts'
+ var FData=useContext(mycontexts);
+<p>{FData}</p>
