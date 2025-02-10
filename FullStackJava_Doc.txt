@@ -1,0 +1,192 @@
+DATE:10.02.2025
+========================================
+FULL STACK JAVA
+======================================================================
+SOFTWARE
+========================
+MYSQL
+JAVA17 ONWARDS
+NODEJS
+IDE
+==========================
+STS==SPRING TOOL SUITE
+VISUAL SOURCE CODE
+POSTMAN
+DBMS
+========================================
+DATABASE MANAGEMENT SYSTEM
+=============================================
+DATABASE IS COLLECTION OF INTERELATED DATA OR TABLES
+DBMS==DATABASE+SQL(STRUCTURED QUERY LANGUAGE)
+1ST GEN===0,1
+2ND GEN===ASSEMBLY LANGUAGE===ASSEMBLER===0,1
+3RD GEN====HLL===COMPILER/INTERPRETER====0,1
+            JAVA
+            ARRAY
+4GL===NON PROCEDURAL LANGUAGE
+      HERE HOW PART IS NOT KNOWN TO US
+      ONLY WHAT PART IS KNOWN TO US
+SELECT * FROM EMP;
+RDBMS
+=====================
+SOFTWARE
+====================
+ORACLE
+MYSQL
+SQLSERVER
+======================================================================================
+SQL COMMAND
+========================================================
+DDL===DATA DEFINATION LANGUAGE
+CREATE,ALTER,RENAME,DROP,TRUNCATE,PURGE
+DATA RETRIEVAL====SELECT
+DML==DATA MANIPULATION LANGUAGE
+INSERT,UPDATE,DELETE,MERGE
+TCL===TRANSACTION CONTROL LANGUAGE
+COMMIT,ROLLBACK,SAVEPOINT
+DCL==DATA CONROL LANGUAGE
+=======================
+GRANT,REVOKE
+================================================================
+LOGIN IN MYSQL
+============================================================
+MySQLCOMMAND LINE RUNNER
+COMMAND PROMPT
+WORKBENCH
+==============================================
+mysql> CREATE TABLE CUSTOMER
+    -> (CID VARCHAR(10),
+    ->  CNAME VARCHAR(25),
+    ->  CPHNO  VARCHAR(10)
+    -> );
+Query OK, 0 rows affected (0.04 sec)
+DESC CUSTOMER;
+INSERT INTO CUSTOMER VALUES('C1','ARUP','565656');
+SELECT * FROM CUSTOMER;
+CONSTRAINTS
+===============================================
+BEFORE INSERTING ANY ROW OF A TABLE YOU HAVE TO STATISFY CERTAIN RULES AND REGULATIONS CALLED
+CONSTRAINT
+TYPES OF CONSTRAINTS
+============================================
+1.PRIMARY KEY===DOES NOT ACCEPT NULL VALUE AS WELL AS DUPLICATE VALUE
+2.UNIQUE KEY===========DOES NOT ACCEPT DUPLICATE VALUE BUT ACCEPT NULL VALUE
+3.NOT NULL=============CAN'T ALLOW NULL VALUE
+4.CHECK CONSTRAINTS
+5.FOREIGN KEY
+
+mysql> CREATE TABLE DEPT
+    -> (DEPTNO VARCHAR(10),
+    ->  DNAME  VARCHAR(25) NOT NULL,
+    ->  LOC    VARCHAR(25) NOT NULL,
+    -> CONSTRAINT DEPT_DEPTNO_PK PRIMARY KEY(DEPTNO)
+    -> );
+Query OK, 0 rows affected (0.04 sec)
+
+DESC DEPT;
+INSERT INTO DEPT VALUES('D1','MKTG','KOLKATA');
+INSERT INTO DEPT VALUES('D2','FINANCE','CHENNAI');
+INSERT INTO DEPT VALUES('D3','HR','DELHI');
+INSERT INTO DEPT VALUES('D4','OPRN','KOLKATA');
+
+SELECT * FROM DEPT;
+
+
+mysql> CREATE TABLE EMP
+    -> (EID VARCHAR(10),
+    ->  ENAME VARCHAR(25) NOT NULL,
+    ->  JOB   VARCHAR(25),
+    ->  SAL   DECIMAL,
+    ->  COMM  DECIMAL,
+    ->  HIREDATE DATE,
+    ->  DEPTNO VARCHAR(10),
+    -> CONSTRAINT EMP_EID_PK PRIMARY KEY(EID),
+    -> CONSTRAINT EMP_DEPTNO_FK FOREIGN KEY(DEPTNO) REFERENCES DEPT(DEPTNO)
+    -> );
+DESC  EMP;
+DATE===YYYY-MM-DD
+INSERT INTO EMP VALUES('E1','SUMAN','MANAGER',50000,5000,'2018-02-12','D1');
+INSERT INTO EMP VALUES('E2','ALOKE','CLERK',25000,2000,'2016-02-15','D1');
+INSERT INTO EMP VALUES('E3','ANNANYA','ANALYST',45000,6000,'2016-05-15','D2');
+INSERT INTO EMP VALUES('E4','RUPAM','MANAGER',65000,NULL,'2017-05-15','D2');
+INSERT INTO EMP VALUES('E5','JAYANTA','CLERK',30000,NULL,'2018-07-18','D3');
+INSERT INTO EMP VALUES('E6','ROBIN','MANAGER',55000,4000,'2019-05-25','D3');
+
+SELECT * FROM EMP;
+ALL RECORDS
+===========================
+SELECT  * FROM EMP;
+SPECIFIC COLUMN
+===========================
+SELECT ENAME,JOB,SAL FROM EMP;
+======================================
+RESTRICTION OF DATA
+==========================================
+SELECT * FROM EMP WHERE ENAME='SUMAN';
+SELECT * FROM EMP WHERE JOB='MANAGER';
+===========================================
+IN CLAUSE
+===============================================
+SELECT * FROM EMP WHERE JOB IN('CLERK','MANAGER');
+==================================================
+SELECT * FROM EMP WHERE JOB NOT IN('CLERK','MANAGER');
+=====================================================
+AND OPERATOR
+=======================================================
+SELECT * FROM EMP WHERE JOB='MANAGER' AND SAL>50000;
+=====================================================
+OR OERATOR
+======================================================
+SELECT * FROM EMP WHERE JOB='CLERK' OR SAL >50000;
+=========================================================
+LIKE OPERATOR
+===========================================================
+SELECT * FROM EMP WHERE ENAME LIKE 'A%';
+SELECT * FROM EMP WHERE ENAME LIKE '_L%';
+SELECT * FROM EMP WHERE ENAME LIKE '%A';
+SELECT * FROM EMP WHERE ENAME LIKE '%A%';
+============================================================
+COMPUTED FIELD
+=============================================================
+SELECT ENAME,JOB,SAL,COMM,SAL+COMM FROM EMP;
+SELECT ENAME,JOB,SAL,COMM,IFNULL(COMM,0) COMMS,SAL+IFNULL(COMM,0) TOTALSAL FROM EMP;
+
+CREATE TABLE EMP1 AS SELECT * FROM EMP;
+==============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
