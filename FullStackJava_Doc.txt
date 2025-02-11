@@ -152,7 +152,269 @@ SELECT ENAME,JOB,SAL,COMM,SAL+COMM FROM EMP;
 SELECT ENAME,JOB,SAL,COMM,IFNULL(COMM,0) COMMS,SAL+IFNULL(COMM,0) TOTALSAL FROM EMP;
 
 CREATE TABLE EMP1 AS SELECT * FROM EMP;
-==============================================================
+===============================================================================
+DUPLICATE TABLE WITHOUT DATA
+=============================================================================
+CREATE TABLE EMP2 AS SELECT * FROM EMP WHERE 1=2;
+==============================================================================
+CREATE TABLE EMP3 AS SELECT * FROM EMP;
+DELETE FROM EMP3  WHERE EID='E6';
+UPDATE EMP3 SET SAL=3000,COMM=9000 WHERE EID='E2';
+SELECT * FROM EMP3;
+==============================================================================
+SELECT E.ENAME,E.JOB,E.SAL,E.COMM,D.DEPTNO,D.DNAME,D.LOC
+FROM EMP E,DEPT D
+WHERE E.DEPTNO=D.DEPTNO;
+==========================================================
+SELECT E.ENAME,E.JOB,E.SAL,E.COMM,D.DEPTNO,D.DNAME,D.LOC
+FROM EMP E JOIN DEPT D ON(E.DEPTNO=D.DEPTNO);
+=======================================================
+SELECT E.ENAME,E.JOB,E.SAL,E.COMM,D.DEPTNO,D.DNAME,D.LOC
+FROM EMP E LEFT OUTER  JOIN DEPT D ON(E.DEPTNO=D.DEPTNO);
+
+SELECT E.ENAME,E.JOB,E.SAL,E.COMM,D.DEPTNO,D.DNAME,D.LOC
+FROM EMP E RIGHT OUTER  JOIN DEPT D ON(E.DEPTNO=D.DEPTNO);
+
+VIEW
+===================================
+LOGICAL STRUCTURE OF A TABLE
+IT DOES NOT STORE DATA.IT ONLY HOLDS STRUCTURE
+
+CREATE VIEW EMP_DEPT_RIGHT
+AS
+SELECT E.ENAME,E.JOB,E.SAL,E.COMM,D.DEPTNO,D.DNAME,D.LOC
+FROM EMP E RIGHT OUTER  JOIN DEPT D ON(E.DEPTNO=D.DEPTNO);
+
+SELECT * FROM EMP_DEPT_RIGHT;
+DESC EMP_DEPT_RIGHT;
+
+SELECT * FROM EMP ORDER BY SAL;
+
+SELECT * FROM EMP ORDER BY SAL DESC LIMIT 2;
+
+CREATE TABLE ORDER_DTLS
+(ORDERID  INT AUTO_INCREMENT,
+ PID      VARCHAR(10),
+ PQTY     DECIMAL,
+ PRICE    DECIMAL,
+ ORDERDT  DATE   DEFAULT(CURRENT_DATE),
+ CONSTRAINT ORDER_DTLS_ORDERID_PK PRIMARY KEY(ORDERID)
+);
+
+INSERT INTO ORDER_DTLS(PID,PQTY,PRICE) VALUES('P1',5,25000);
+INSERT INTO ORDER_DTLS(PID,PQTY,PRICE) VALUES('P2',15,18000);
+SELECT * FROM ORDER_DTLS;
+
+MAVEN
+=====================================================================
+MAVEN IS A BUILD TOOL
+PURPOSE 
+===========================================
+AUTOMATE THE BUILDING PROCESS
+=======================================================
+BUILDING PROCESS
+=====================================================================
+1.DOWNLOAD THE JAR FILES/LIBRARIES
+2.COMPILE THE SOURCE CODE
+3.EXECUTE THE TEST CASES
+4.PACKAGE INTO JAR OR WAR  OF JAVA APPLICATION
+=====================================================
+TERMS
+===============================================
+ARCHIETYPE====TYPE OF PROJECT
+              QUICK START,WEB
+GROUP ID====ORGANIZATION NAME
+             com.arindam
+ARTIFACT ID===NAME OF THE PROJECT
+VERSION======SNAPSHOT====UNDER DEVELOPING
+             REALEASE
+DEPENDENCY====JAR FILES/LIBRARIES
+REPOSITORY===WHERE THE JAR FILES ARE STORED
+ THREE KIND OF REPOSITORIES
+=================================
+1.LOCAL
+2.CENTRAL
+3.REMOTE
+GOAL
+=======================
+CLEAN
+COMPILE
+TEST
+PACKAGE
+=================================================================
+DATE:11.02.2024
+=============================================================
+JDBC
+=================================================================
+JAVA DATABASE CONNECTIVITY
+import java.sql.*;====SET OF CLASSES AND SET OF INTERFACES
+LIST OF INTERFACES
+Connection====TO ESTABLISH THE CONNECTION
+Statement====EXECUTE SQL QUERIES
+PreparedStatement=====EXECUTE PRE COMPILED SQL STATEMENT
+CallableStatement====TO EXECUTE STORED PROCEDURE
+ResultSet========STORE DATA INTO RESULTSET
+ResultSetMetaData====GIVING DETAILS INFORMATION OF RESULTSET
+DatabaseMetaData=====GIVING DETAILS INFORMATION OF DATABASE
+CLASSES
+===================================
+DriverManager====REGISTER AND LOAD THE JDBC DRIVER
+Date==========DEALING WITH DATE DATA TYPES
+TimeStamp======DEALS WITH BOTH DATE AND TIME
+EXCEPTION HANDLE HERE
+=====================================
+1.ClassNotFoundException
+2.SQLException
+TYPES OF DRIVER
+===============================
+1.JDBC-ODBC BRIDGE========TYPE-I DRIVER
+2.NATIVE API-ALL JAVA=====TYPE-II DRIVER
+3.JDBC NETWORK -ALL JAVA==TYPE-III DRIVER
+4.NATIVE PROTOCOL -ALL JAVA==TYPE-IV DRIVER
+===========================================================
+mysql> CREATE DATABASE TESTINGDBS;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> USE TESTINGDBS;
+Database changed
+mysql> SHOW TABLES;
+Empty set (0.00 sec)
+CREATE TABLE CUSTOMER
+(CID VARCHAR(10),
+ CNAME VARCHAR(25) NOT NULL,
+ CPHNO VARCHAR(10) NOT NULL,
+CONSTRAINT CUSTOMER_CID_PK PRIMARY KEY(CID)
+);
+
+INSERT INTO CUSTOMER VALUES('C1','ARUP','656556');
+INSERT INTO CUSTOMER VALUES('C2','SUMAN','464464');
+SELECT * FROM CUSTOMER;
+------------------------------------------------------------------
+private Connection cn=null;
+	private Statement  st=null;
+	private ResultSet rs=null;
+	private String select_sql="select * from customer";
+
+
+public class JavaMySqlConn {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+  TestConnection ts=new TestConnection();
+  ts.getData();
+	}
+
+}
+System.out.println(rs.getString(1)+"===>"+rs.getString(2)+"====>"+rs.getString(3));
+STEPS OF COMMUNICATION JAVA WITH DATABASE
+
+=======================================
+1.import java.sql.*;
+2.REGISTER AND LOAD THE JDBC DRIVER
+3.ESTABLISH CONNECTION
+4.CREATE THE STATEMENT
+5.EXECUTE THE STATEMENT
+6.RETRIEVE DATA INTO RESULTSET
+String delete_sql="delete from customer where cid=?";
+String update_sql="update customer set cname=?,cphno=? where cid=?";
+
+public int add()
+{
+
+
+
+}
+public Connection getConn()
+{
+
+}
+HibernateAll
+
+=============================================================================
+HIBERNATE
+==============================================================================
+HIBERNATE IS A ORM TOOL
+.java===compile===.class===container===.java===.class==o/p
+.java===compile===.class==container==o/p
+POJO CLASS
+======================
+POJO===PLAIN OLD JAVA OBJECT
+GETTER()  SETTER() CONSTRUCTOR
+
+mysql> CREATE DATABASE HBDBST;
+Query OK, 1 row affected (0.03 sec)
+
+
+public class ClientApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+EntityTransaction tx=null;
+EntityManagerFactory emf=Persistence.createEntityManagerFactory("AppDB");
+EntityManager em=emf.createEntityManager();//for create update delete
+tx=em.getTransaction();//TRANSACTION CREATED
+tx.begin();//start the transaction
+Customer cs1=new Customer("C1","ARUP","566565");
+em.persist(cs1);//SAVE THE DATA
+tx.commit();
+emf.close();
+
+	}
+
+}
+
+@Entity
+@Table(name="Employee_master")
+public class Employee {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+private Integer eid;
+	@Column(length = 25,nullable = false)
+private String ename;
+	@Column(name="job",length = 25)
+private String edesig;
+private Double sal;
+@Temporal(TemporalType.DATE)
+private Date joindt;
+@Temporal(TemporalType.TIMESTAMP)
+private Date workhr;
+@Transient
+private String email;
+
+Employee emp1=new Employee();
+Employee emp2=new Employee();
+emp1.setEname("ALOKE");
+emp1.setEdesig("MANAGER");
+emp1.setSal(54000.00);
+emp1.setJoindt(new Date());
+emp1.setWorkhr(new Date());
+emp1.setEmail("al@gmail.com");
+emp2.setEname("AYAN");
+emp2.setEdesig("ANALYST");
+emp2.setSal(45000.00);
+emp2.setJoindt(new Date());
+emp2.setWorkhr(new Date());
+emp2.setEmail("ay@gmail.com");
+em.persist(emp1);
+em.persist(emp2);
+tx.commit();
+emf.close();
+
+
+
+               
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
