@@ -399,6 +399,173 @@ em.persist(emp1);
 em.persist(emp2);
 tx.commit();
 emf.close();
+==============================================================================
+DATE:12.02.2025
+==============================================================================
+@Entity===CLASS NAME SAME AS TABLE NAME
+@Table
+@Id=====PRIMARY KEY
+@Column=== length,name,nullable=false
+@GeneratedValue===AutoInncrement
+                 strategy===GenerationType.IDENTITY
+@Temporal===TemporalType.Date
+            TemporalType.TimeStamp
+@Transient
+@OneToOne
+@JoinColumn
+EntityManagerFactory===TO READ THE PERSISTANCE.XML FILE
+EntityManager===create,update,delete
+Transaction===
+persist(object)====SAVE DATA INTO TABLE
+OBJECT===ROW OR RECORDS OF A TABLE
+CRUD OPERATION
+=======================
+INSERT
+UPDATE
+DELETE
+FETCH
+TO FETCH DATA
+==========================================================
+1.SQL===KNOWS THE TABLE
+2.JPQL===JAVA PERSISTANCE QUERY LANGUGAE===IT KNOWS ONLY CLASS NAME
+3.HQL====HIBERNATE QUERY LANGUAGE====IT KNOWS CLASS ONLY
+======================================================================
+
+EntityTransaction tx=null;
+		EntityManagerFactory emf=Persistence.createEntityManagerFactory("AppDB");
+		EntityManager em=emf.createEntityManager();//for create update delete
+		tx=em.getTransaction();//TRANSACTION CREATED
+		tx.begin();//start the transaction
+		//CREATION OF TABLE AND INSERT DATA
+		Product pr1=new Product("P1","TV",5,25000.00);//row of table
+		Product pr2=new Product("P2","TAB",15,22000.00);//row of table
+		//em.persist(pr1);
+		//em.persist(pr2);
+		//FETNCHING    DATA
+		String jpql="select p from Product p";
+		Query query=em.createQuery(jpql);
+		List<Product> plist=query.getResultList();
+		plist.stream().forEach(System.out::println);
+		
+		tx.commit();
+		emf.close();
+//UPDATE DATA
+		Product ps=em.find(Product.class,"P1");
+		if(ps!=null)
+		{
+			ps.setPname("REFRIGERATOR");
+			ps.setPqty(15);
+			ps.setPrice(27000.00);
+			em.merge(ps);
+		}
+
+String hql="from Product";
+		//Query query=em.createQuery(jpql);
+		Query query=em.createQuery(hql);
+		List<Product> plist=query.getResultList();
+		plist.stream().forEach(System.out::println);
+		
+		tx.commit();
+		emf.close();
+===============================================================================
+SPRING
+===============================================================
+1.DESTOP APPLICATION:CORE JAVA,AWT,SWING,SPRING======JAR
+2.WEB APPLICATION:SERVLET,JSP,SPRING MVC=============WAR
+3.ENTERPRISE APPLICATION==SPRING======================EAR(JAR+WAR)
+===============================================================
+DEFINATION
+==============================================================
+SPRING OPEN SOURCE LIGHT WEIGHT DEPENDENCY INJECTION BASED FRAMEWORK SOFTWARE 
+TO DEVELOP ENTERPRISE APPLICATION
+=====================================================================
+TECHNOLOGY
+=========
+WEB====SERVLET,JSP
+MAILING===JAVAMAIL
+SMS===JMS
+====================================
+DESIGN PATTERN
+==============================================================
+WELL APPROVED SOLUTION
+FRAMEWORK
+=========================================
+FRAMEWORK==TECHNOLOGY+DESIGN PATTERN
+RAD==RAPID APPLICATION DEVELOPMENT
+===========================================================
+FEATURES OF SPRING
+===================================================
+IT IS A CONTAINER MANAGEMENT SYSTEM
+=======================================================
+CONATINER
+=====================================================
+1.SCAN THE CLASSES
+2.CREATE THE OBJECT
+3.PROVIDE DATA
+4.LINKING BETWEEN OBJECT
+5.DESTROY THE OBJECT
+===========================================================
+DEPENDENCY 
+===========================================================
+INSTANCE VARIABLE ARE DEPENDENCY
+TYPES OF DEPENDENCY
+=========================
+PRIMITIVE TYPES==INT,FLOAT,DOUBLE,BOOLEAN
+COLLECTION TYPE===LIST,SET,MAP,PROPERTIES
+REFERENCE TYPE
+============================================
+DEPENDENCY INJECTION
+===================================================
+PROVIDE THE DATA TO THE DEPENDENCY
+LINKING BETWEEN THE OBJECTS
+=================================================
+MODULE
+=============================================
+1.SPRING CORE
+2.SPRING ORM
+3.SPRING DAO
+4.SPRING CONTEXT
+5.SPRING AOP
+6.SPRING WEB
+7.SPRING MVC
+==============================================
+TYPES OF ANNOTATION
+================================
+BASIC ANNOTATION
+STRETOTYPE ANNOTATION
+===================================================
+PRACTICAL
+=================================
+1.SPRING BEAN CLASS=====com.arindam.bean=====Customer
+2.CONFIGURATION CLASS====com.arindam.config===SpringConfig
+3.MAIN CLASS=============com.arindam.client====ClientApp===MAIN SHOULD BE THERE
+DEPENDENCY
+==========================================
+SPRING CORE
+============================================================================
+READING  DATA FROM PROPERTIES FILE
+SETTER INJECTION
+==============================================
+PRIMITIVE TYPE
+LIST
+SET
+MAP
+PROPERTIES
+===================================================
+
+
+eid=E1
+ename=ALOKE
+friends={AYAN,RAJAT,SAYAN,SAYAN}
+phno={7656565,434343}
+products={"TV":25000.00,"TAB":22000.00}
+pinfo={"panno":"543545as","adharno":"87687weew"}
+
+@Value("#{${products}}")
+
+@Value("#{${pinfo}}")
+
+
 
 
 
