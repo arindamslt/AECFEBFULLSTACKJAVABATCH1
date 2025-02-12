@@ -1,0 +1,22 @@
+READING FROM PROPERTIES FILE IN SPRING
+==========================================
+TO BE USED IN CONFIG FILE
+=============================================
+@PropertySource("classpath:application.properties")
+==================================================
+READING DATA FROM MAP COLLECTION FROM PROPERTIES FILE
+=================================================
+@Value("#{${products}}")
+====================================================
+READING DATA FROM PROPERTIES COLLECTION FROM PROPERTIES FILE
+=============================================================
+@Value("#{${pinfo}}")
+===========================================================
+IN CONFIG FILE
+=========================================================
+@ComponentScan(basePackages = "com.arindam")
+==========================================================
+READING DATA FROM PRIMITIVE TYPES FROM PROPERTIES FILE
+============================================================
+@Value("${eid}")
+============================================================
