@@ -564,6 +564,152 @@ pinfo={"panno":"543545as","adharno":"87687weew"}
 @Value("#{${products}}")
 
 @Value("#{${pinfo}}")
+============================================================
+DATE:13.02.2025
+============================================================
+SPRING
+=============================
+FRAMEWORK
+DEPENDENCY
+DEPENDENCY INJECTION
+SPRING BEAN
+STEREOTYPE ANNOTATION
+=================================================
+@Component==CREATE THE  OBJECT IN THE CONTAINER
+
+BASIC ANNOTATION
+=================================================
+@ComponentScan
+@Value
+@Autowire
+==================================================================
+LIMITATION OF SPRING
+=============================================
+1.WE NEED USE LOT OF DEPENDENCIES ALONG WITH COMPATABLE VERSION
+2.WE HAVE TO CONFIGURE LOT OF THINGS
+3.DEPLOY APPLICATION INTO EXTERNAL SERVER
+===============================================================
+SPRING BOOT
+=======================================================
+SPRING BOOT IS AN ARCHITECTURAL STYLE BUILD ON TOP OF THE SPRING
+
+ADVANTAGE
+==========================================================
+1.STARTER DEPENDENCY
+======================================================
+RELATED JAR FILES OF DIFFERENT MODULE GROUP TOGETHER INTO SINGLE UNIT
+EX:SPRING BOOT STARTER
+   SPRING BOOT STARTER WEB
+2.AUTOCONFIGURATION
+BY DEFAULT AUTOCINFIGURATION IS DISABLE
+@EnableAutoConfiguration
+3.EMBEDDED SERVER
+HOW CAN YOU CREATE THE SPRING BOOT PROJECT
+==============================================
+1.MAVEN
+2.SPRING INITIALIZER
+3.SPRING BOOT STARTER
+@SpringBootApplication
+==============================
+@ComponentScan
+@Configuration
+@EnableAutoConfiguration
+
+myapp.driver=com.mysql.cj.jdbc.Driver
+myapp.url=jdbc:mysql//localhost:3306/test
+myapp.username=root
+myapp.password=arindam
+
+
+myapp: 
+ driver: com.mysql.cj.jdbc.Driver
+ url: jdbc:mysql//localhost:3306/test
+ username: root
+ password: arindam
+YML IS BETTER THAN PROPERTIES FILE
+=================================
+1.MORE READABLE
+2.NO  INDEX DUPLICATION REQUIRED
+================================================================
+
+mysql> use hbdbst;
+Database changed
+mysql> show tables;
++------------------+
+| Tables_in_hbdbst |
++------------------+
+| adhar            |
+| customer         |
+| emp              |
+| employee_master  |
+| product          |
++------------------+
+5 rows in set (0.02 sec)
+
+CREATE TABLE ACCOUNT
+(ACCNO VARCHAR(10),
+ CNAME VARCHAR(25) NOT NULL,
+ BALANCE  DECIMAL,
+ CONSTRAINT ACCOUNT_ACCNO_PK PRIMARY KEY(ACCNO)
+);
+DESC ACCOUNT;
+
+SPRING BOOT JDBC COMMUNICATION
+==============================
+DEPENDENCY NEEDED
+=========================
+1.JDBC API
+2.MYSQL
+
+JdbcTemplate
+int n=template.update(insert_sql);
+		System.out.println("THE NUMBER OF ROWS INSERTED:"+n);
+		List aclist=template.queryForList(select_sql);
+		aclist.stream().forEach(System.out::println);
+==========================================================================
+SPRING SCOPE
+================================================================
+1.SINGLETON
+2.PROTOTYPE
+3.REQUEST
+4.SESSION
+========================================================
+salesid=S1
+cname=ARUP,ALOKE,NAYAN
+email=ar@gmail.com,al@gmail.com,ny@gmail.com
+purchase.TV=25000.00
+purchase.TAB=18000.00
+address.streetnm=BEADON STREET
+address.city=KOLKATA
+========================================================================
+SPRING HIBERNATE COMMUNICATION USING SPRING BOOT
+======================================================================
+
+SPRING DATA JPA
+============================================================
+TWO INTERFACE
+========================================================
+CrudRepository<T,ID>
+T==ENTITY CLASS
+ID==DATA TYPE OF PRIMARY KEY
+JpaRepository<T,ID> extends CrudRepository<T,ID>
+save()
+findById()
+findAll()
+delete()
+===================================
+DEPENDENCY
+=====================================
+MYSQL
+DATA JPA
+@Component====OBJECT CREATION
+@Repository==Object Creation + Database Operation
+@Service=====Object Creation+Transaction Management
+@Controller
+@RestController
+
+
+
 
 
 
