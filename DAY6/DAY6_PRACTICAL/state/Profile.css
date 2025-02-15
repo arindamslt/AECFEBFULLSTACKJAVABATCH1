@@ -1,0 +1,12 @@
+.mainContainer{
+    /*background-color: red;*/
+    display: flex;
+}
+.leftContainer{
+    /*background-color: blue;*/
+    width: 30%;
+}
+.rightContainer{
+   /* background-color: gray;*/
+   width: 70%;
+}

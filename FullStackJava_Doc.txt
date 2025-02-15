@@ -864,6 +864,66 @@ UI FOLDER NAME
 ============================================
 UIFRONTENDREACTJS
 ================================================
+DATE:15.02.2025
+=================================================================================
+FUNCTION
+========================================================
+1.CONCRETE FUNCTION
+2.PARAMERISED FUNCTION
+3.FUNCTION WITH RETURN STATEMENT
+4.CALLBACK FUNCTION
+5.ANNONYMOUS FUNCTION
+6.HIGHER ORDER FUNCTION
+7.ARROW FUNCTION
+===================================================================
+DOM
+=======================================================
+DOCUMENT OBJECT MODEL
+========================================================
+THE HTML ELEMENT PARESED INTO OBJECTS CALLED NODES AND IT WILL FORM TREE DATA STRUCTURE
+CALLED DOM
+=================================================================================
+BROWSER ENGINE==SOFTWARE
+
+HTML===COMPILED===BYTES===TOKEN===OBJECT(NODES)
+=================================================================================
+EVENT HANDELLING
+===============================================================================
+REACT JS
+======================================================================
+
+REACT IS JAVASCRIPT JAVASCRIPT LIBRARY.
+REACT ELEMENT
+
+<script>
+        const createUi=()=>{
+           var btnRef= React.createElement("button",null,"CLICKED");
+           ReactDOM.render(btnRef,document.getElementById("root"));
+        }
+        createUi();
+    </script>
+REACT IS  A JAVASCRIPT LIBRARY.
+LIBRARY===COLLECTION OF CLASSES AND FUNCTIONS
+PURPOSE
+=============================
+CREATE USER INTERACE
+REACT+OTHER LIBRARIES====FRONT END APPLICATION
+REACT ELEMENT====REACT DOM====RENDER()====DOM==DOM+CSSDOM==RENDERING TREE==PAINT ON BROWSER
+JSX
+==================================================================
+JSX====BABEL=====REACT ELEMENT===REACT DOM====RENDER()====DOM==DOM+CSSDOM==RENDERING TREE==PAINT ON BROWSE
+JSX IS 99% SIMILAR TO HTML
+JSX SHOULD WRITTEN IN JS FUNCTION
+
+
+
+
+
+
+
+
+
+
 
 
 
