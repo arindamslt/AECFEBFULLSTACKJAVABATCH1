@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+    <script>
+        const createUi=(label)=>{
+            var btnRef=document.createElement("button");
+            btnRef.innerText=label;
+            document.getElementById("root").appendChild(btnRef);
+        }
+        createUi("ANGULAR JS");
+        createUi("REACT JS");
+        createUi("VUE JS");
+    </script>
+</body>
+</html>
