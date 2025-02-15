@@ -1,0 +1,10 @@
+AFTER CREATING PROJECT IN REACT JS 19 WITH CRA TOOL
+=====================================================
+1.Index.js FILE
+===============================================
+COMMENT ON LINE NO 1 AND LINE NO 17
+2.IN APP.JS FILE
+=================================================
+1.DELETE <header> </header> TAG
+2.COMMENT ON LINE NO 1
+=======================================================

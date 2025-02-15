@@ -707,6 +707,177 @@ DATA JPA
 @Service=====Object Creation+Transaction Management
 @Controller
 @RestController
+============================================================================
+DATE:14.02.2025
+============================================================================
+
+REST FULL WEBERVICE
+=====================================================================
+WEBSERVICE
+====================================================================
+IT IS USED TO COMMUNICATE BETWEEN TWO INTER OPERABLE APPLICATION
+TYPES OF WEBSERVICE
+=================================
+1.SOAP===SIMPLE OBJECT ACCESS PROTOCOL======ONLY SUPPORT XML
+2.REST===REPRESENTATIONAL STATE TRANSFER============BOTH XML AND JSON
+================================================================================
+HTTP METHODS
+===============================================
+POST===ADD DATA TO THE SERVER
+GET===GET DATA FROM SERVER
+DELETE===DELETE DATA FROM SERVER
+PUT=======UPDATE DATA TO THE SERVER
+PATCH===UPDATE DATA BUT NOT ALL OF THEM
+===============================================================================
+HTTP STATUS CODE
+===================================================================================
+404===NOT FOUND
+405===INTERNAL SERVER ERROR
+200===OK
+=====================================================================
+ACTION BASED URL
+========================================================
+http://localhost:1002/xyz/?id=1
+                           query parameter
+========================================================
+RESOURCE BASED URL
+===============================================================
+http://localhost:1002/xyz/1
+                          PATH VARIABLE
+==============================================================
+CONTROLLLER
+RESTCONTROLLER
+@Controller===========OBJECT CREATION+WEB APPLICATION
+@RestController=======OBJECT CREATION+REST FULL WEBSERVICES
+REST API TOOLS
+============================
+POSTMAN
+SWAGGER
+================================
+JSON===JAVASCRIPT OBJECT NOTATION
+=======================================
+{
+   "cid":"C1",
+   "cname":"ARUP"
+
+}
+SPRING BOOT REST API
+====================================
+MYSQL
+DATA JPA
+SPRING WEB
+SPRING DEV TOOLS
+=========================================
+URL FOR ADDING DATA
+============================
+http://localhost:1004/product/add
+
+{
+    "pid":"P1",
+    "pname":"TV",
+    "pqty":5,
+    "price":25000.00
+}
+http://localhost:1005/product/fetch/P1
+@GetMapping("/fetch/{pid}")
+	public ResponseEntity<Product> getPidDetails(@PathVariable String pid)
+	{
+		Product ps=pservice.getPidDetails(pid);
+		return new ResponseEntity<Product>(ps,HttpStatus.OK);
+	}
+
+public Product getPidDetails(String pid)
+	{
+		return prepo.findById(pid).orElse(null);
+		
+	}
+DELETE DATA URL
+===========================================================
+http://localhost:1005/product/del/P1
+
+UPDATE DATA URL
+===================================================================
+http://localhost:1005/product/upd/P2
+@PutMapping("/upd/{pid}")
+	public ResponseEntity<Product> updateData(@PathVariable String pid,@RequestBody Product ps)
+	{
+		Product pst=pservice.updateData(pid, ps);
+		return new ResponseEntity<Product>(pst,HttpStatus.OK);
+	}
+========================================================================================
+FRONT END
+=========================================================================================
+IDE:VISUAL SOURCE CODE
+===========================================================================================
+HTML
+CSS
+BOOTSTRAP
+JAVASCRIPT
+ECHMASCRIPT
+REACT JS
+=============================================================================
+HTML
+======================================
+HYPER TEXT MARK UP LANGUAGE
+PURPOSE
+=======================================================================
+TO STRUCTURE THE CONTENT IN WEB PAGE
+==============================================================================
+WEB PAGE
+====================================================================================
+IT IS  A ELECTRONIC PAGE TO DISPLAY SOME CONTENTS
+==============================================
+HTML IS COLLECTION OF CONTENTS
+=========================================================
+TYPES OF CONTENTS
+=================================================================
+HEADING ELEMEMT
+TABLE ELEMENT
+ANCHOR ELEMENT
+FORM ELEMENT
+=====================================================
+ELEMENT IS REPRESENT BY MEANS OF TAG
+TYPES OF TAG
+================================================
+OPENING TAG
+CLOSING TAG
+SELF CLOSING TAG
+========================================
+JAVASCRIPT
+============================================================
+JAVASCRIPT IS A PROGRAMMING LANGUAGE.BEFORE 2101 IT IS CALLED SCRIPTING LANGUAGE
+NOW IT CAN BE COMMUNICATE DATABASE,FRONT END AND BACK END SERVER
+=====================================================================
+PURPOSE
+==========================================================================
+DYNAMIC WEB PAGE
+VALIDATION TO SERVER SIDE AND CLIENT SIDE
+==============================================================
+NODE JS
+==========================================================
+JAVASCRIPT RUN TIME ENVIRONMENT
+=============================================================
+
+DATA TYPES
+=============================================================================
+UI FOLDER NAME
+============================================
+UIFRONTENDREACTJS
+================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
