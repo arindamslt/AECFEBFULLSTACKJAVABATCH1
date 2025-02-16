@@ -914,6 +914,37 @@ JSX
 JSX====BABEL=====REACT ELEMENT===REACT DOM====RENDER()====DOM==DOM+CSSDOM==RENDERING TREE==PAINT ON BROWSE
 JSX IS 99% SIMILAR TO HTML
 JSX SHOULD WRITTEN IN JS FUNCTION
+========================================================================
+CRA========CREATE REACT APP  TOOL
+=========================================================================
+NPM====INSTALL THE TOOL
+NPX====RUN THE TOOL
+=========================================================================================
+npx create-react-app appdemo
+
+AFTER CREATING PROJECT IN REACT JS 19 WITH CRA TOOL
+=====================================================
+1.Index.js FILE
+===============================================
+COMMENT ON LINE NO 1 AND LINE NO 17
+2.IN APP.JS FILE
+=================================================
+1.DELETE <header> </header> TAG
+2.COMMENT ON LINE NO 1
+=======================================================
+REACT HOOK
+============================================================
+IT IS A JAVASCRIPT FUNCTION USED FOR SPECIAL PURPOSE
+use<NAME>
+useState
+useEffect
+useReducer
+useRef
+useContext
+useCallback
+
+
+
 
 
 
