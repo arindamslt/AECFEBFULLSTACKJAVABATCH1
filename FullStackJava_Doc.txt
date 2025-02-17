@@ -984,8 +984,20 @@ const filterData=(event)=>{
             setUser(data);
         }
     }
+=========================================================================================
+DATE:17.02.2025
+========================================================================================
+ROUTING AND NESTED ROUTING
+=========================================================================================
+OPEN index.js file under src folder
+import { BrowserRouter as Rt } from "react-router-dom";
+WITHN render() method
 
-
+<Rt>
+    <App />
+    </Rt>
+   <Route path="/contact" element={<Contact/>}/>
+========================================================================
 
 
 
