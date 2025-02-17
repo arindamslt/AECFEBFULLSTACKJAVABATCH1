@@ -951,9 +951,39 @@ WHEN YOU PASS THE VALUE FROM ONE COMPONENT TO HIS CHILD COMPONENT
 
 AXIOS
 =====================================================================
+AXIOS IS USED TO COMMUNICATE TO THE EXTERNAL SERVER
+npm install axios
+"https://randomuser.me/api/?results=20"
+ <button className='btn btn-outline-secondary' onClick={getData}>GETDATA</button>
+{
+        user.length>0 &&(
+            <div>
+            <input type="radio" name="gender" value="all" defaultChecked/>All
+            <input type="radio" name="gender" value="male" />male
+            <input type="radio" name="gender" value="female" />female
+            </div>
+        )
+      }
+
 
 .
-
+const filterData=(event)=>{
+      if(event.target.value==='male')
+      {
+        setUser(data.filter((element,index)=>{
+            return element.gender==='male';
+        }))
+      }
+      else if(event.target.value==='female')
+        {
+          setUser(data.filter((element,index)=>{
+              return element.gender==='female';
+          }))
+        }
+        else{
+            setUser(data);
+        }
+    }
 
 
 

@@ -1,51 +1,23 @@
 import React from 'react'
 import axios from 'axios'
 import { useState } from 'react'
-function User() {
-    let[user,setUser]=useState([]);
-    let[data,setData]=useState([]);
-    const getData=()=>{
+import { useEffect } from 'react'
+function UserInfo() {
+      let[user,setUser]=useState([]);
+      useEffect(()=>{
         axios.get("https://randomuser.me/api/?results=20")
         .then((res)=>{
             console.log(res.data.results);
             setUser(res.data.results);
-            setData(res.data.results);
+           
         })
         .catch((error)=>{
             alert("SOMETHING WENT WRONG FETCHING DATA");
             console.log(error);
         })
-    }
-    const filterData=(event)=>{
-      if(event.target.value==='male')
-      {
-        setUser(data.filter((element,index)=>{
-            return element.gender==='male';
-        }))
-      }
-      else if(event.target.value==='female')
-        {
-          setUser(data.filter((element,index)=>{
-              return element.gender==='female';
-          }))
-        }
-        else{
-            setUser(data);
-        }
-    }
+      },[])
   return (
     <div>
-      <h2>USER DETAILS</h2>
-      <button className='btn btn-outline-secondary' onClick={getData}>GETDATA</button>
-      {
-        user.length>0 &&(
-            <div>
-            <input type="radio" name="gender" value="all" defaultChecked onChange={filterData}/>All
-            <input type="radio" name="gender" value="male" onChange={filterData}/>male
-            <input type="radio" name="gender" value="female" onChange={filterData}/>female
-            </div>
-        )
-      }
       {
          user.length>0 ? 
          <div style={{width:"30%",margin:"50px auto"}}>
@@ -85,4 +57,4 @@ function User() {
   )
 }
 
-export default User
+export default UserInfo
