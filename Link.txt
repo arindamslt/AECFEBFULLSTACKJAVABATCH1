@@ -1,0 +1,4 @@
+<Link to="electronics">ELECTRONICS</Link>
+       <Link to="retails">RETAILS</Link>
+       <Link to="garment">GARMENT</Link>
+       <Link to="jewellery">JEWELLERY</Link>
