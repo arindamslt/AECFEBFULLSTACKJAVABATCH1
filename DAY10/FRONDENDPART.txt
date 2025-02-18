@@ -1,0 +1,7 @@
+Register.js=====
+Login.js=======
+NavClient.js====COPY OF Nav.js 
+SearchClient.js===COPY OF Search.js
+FoodListClient.js==COPY OF FoodList
+AddOrder.js
+Billing.js

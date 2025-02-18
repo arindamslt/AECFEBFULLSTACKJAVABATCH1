@@ -997,7 +997,72 @@ WITHN render() method
     <App />
     </Rt>
    <Route path="/contact" element={<Contact/>}/>
-========================================================================
+=======================================================================================
+BOOT RACT INTEGRATION
+====================================================================================
+BOOT PROJECT===1005
+REACT JS======3000
+http://localhost:1005/product/fetch
+
+@CrossOrigin(origins="http://localhost:3000/")
+
+{
+    "pid":"P3",
+    "pname":"TAB",
+    "pqty":1,
+    "price":18000.00
+}
+
+http://localhost:1005/product/add
+======================================================================================
+DATE:18.02.2025
+========================================================================================
+FOODAPP
+DEENDENCY
+===================================
+MYSQL
+DATAJPA
+SPRINGWEB
+SPRING DEV TOOLS
+====================================================
+
+http://localhost:1004/food/add
+{
+  "fid":"F1",
+  "fname":"MOMO",
+  "price":200.00
+} 
+=======================================
+Food.js
+Food.css
+AddFood.js
+DelFood.js
+UpdFood.js
+SearchFood.js
+FoodList.js
+================================================
+Register
+============================
+uname pk lengh=15
+pass notnull 10
+nm   length 25
+phno  length 10
+email  length 30
+ONLY SAVE AND FETCH
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
