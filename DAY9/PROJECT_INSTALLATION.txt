@@ -1,0 +1,31 @@
+FROND END
+=================================
+npx create-react-app foodapp
+=================================
+npm install bootstrap
+npm install react-router-dom
+npm install axios
+==================================
+IN index.js File
+===================================
+ROUTING 
+========================================================
+STEP1
+==========================================================
+npm install react-router-dom
+STEP2
+======================================================
+OPEN index.js file under src folder
+import { BrowserRouter as Rt } from "react-router-dom";
+WITHN render() method
+======================================
+<React.StrictMode>
+   <Rt>
+    <App />
+    </Rt>
+  </React.StrictMode>
+========================================================
+IN App.js
+========================================================
+import { Routes,Route } from 'react-router-dom';
+=======================================================
